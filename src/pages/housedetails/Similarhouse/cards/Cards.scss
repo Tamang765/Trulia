@@ -1,0 +1,38 @@
+.Cards-testimonial{
+    .card:nth-child(1){
+        background-color: orangered !important;
+    }
+    .card:nth-child(2){
+        background-color: blue !important;
+    }
+    .slick-slider{
+        padding-left: 35px;
+    }
+    .slick-prev{
+        padding-left: 19px;
+    }
+    .slick-next{
+        padding-right: 46px;
+    }
+    .slick-next::before,.slick-prev::before{
+        font-size: 30px;
+    }
+    .card{
+     background-color: rgb(0, 86, 93);
+     color: white;
+     
+    }
+    .card-title{
+        h2{
+            display: inline-grid;
+            font-size: 11px;
+        }
+        svg{
+            width: 40px;
+            background: white;
+            border-radius: 50%;
+            height: 37px;
+            color: grey;
+        }
+    }
+}

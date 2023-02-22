@@ -1,0 +1,34 @@
+.price-table{ 
+    table{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d7d9db;
+
+button{
+    position: relative;
+    display: flex;
+    gap: 10rem;
+
+}
+tr{
+    display: flex;
+    gap: 12rem;
+    padding-left: 26px;
+}
+    }
+}
+.accordion{
+position: relative;
+th{
+    font-weight: 400;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: white;
+}
+h2{
+    position: relative;
+}
+}
+

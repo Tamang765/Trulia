@@ -1,0 +1,41 @@
+.newlylisted{
+    .slick-slider{
+        height: 50vh;}
+    .newlylisted-house{
+        overflow: hidden;
+        margin-right: 10px;
+        border-radius: 15px;
+        img{
+            width: 224px;
+            height: 160px;
+            filter: brightness(75%);
+            object-fit: cover;
+            transition: all .3s ease;
+            border-radius: 29px;
+        }
+        img:hover{
+            transform: scale(1.1);
+            overflow: hidden;
+        }
+    
+    }
+    .row{
+        h2{
+            font-weight: 900;
+            top: 10px;
+            left: 29px;
+            font-size: 10px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .icon{
+            color: grey;
+            font-size: 20px;
+            padding:0 4px;
+        }
+        .house-address{
+            font-size: 13px;
+        }
+    }
+}

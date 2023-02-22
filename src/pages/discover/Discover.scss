@@ -1,0 +1,22 @@
+.discover-section{
+    background: url("../../media/discover.jpg");
+    background-size: cover;
+    position: relative;
+    align-items: center;
+
+    height: 39rem;
+    .discover{
+        position: absolute;
+        color: white;
+        .discover-houses{
+            .select-category{
+                background-color: rgba(59, 65, 68, 0.6);
+                border-radius: 13px;
+            .btn{
+                color: white;
+                padding: 8px 28px;
+            }
+        }
+        }
+    }
+}

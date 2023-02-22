@@ -1,0 +1,42 @@
+.Local-testimonials{
+    margin-top: 4rem;
+    border: 1px solid #999;
+    padding: 10px;
+    background: lightgrey;
+    border-radius: 10px;
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .btn{
+            width: 10rem;
+        }
+    }
+    h2{
+        padding-bottom: 40px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .user-votes{
+        .votes-details{
+          ul{
+            justify-content: center;
+          }
+            li{
+                display: flex;
+                gap: 4rem;
+                padding-right: 5rem;
+                div:nth-child(odd){
+                    width: 70px;
+                   background-color: lightblue; 
+                }
+                div{
+                    display: flex;
+                }
+                
+            }
+            
+        
+        }
+    }
+}

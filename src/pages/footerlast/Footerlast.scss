@@ -1,0 +1,22 @@
+.footerlast{
+    width: 100%;
+    max-width: 960px;
+    p{
+        font-size: 10px;
+        display: flex;
+        font-weight: 600;
+    }
+    .licence{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    
+  
+}
+    .trulia-links{
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+}

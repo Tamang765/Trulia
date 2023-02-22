@@ -1,0 +1,90 @@
+.navigator-explore{
+  display: flex;
+  align-items: center;
+
+}
+.dropdown-menu.show{
+  display: flex;
+}
+.dropdown{
+  border: 1px solid rgb(188, 181, 181);
+  border-radius: 5px;
+}
+.navbar-nav{
+  gap: 10px;
+}
+.subsmenu .dropdown-menu.show{
+  display: block;
+  left: -6px;
+  top: 41px;
+
+    width: 100px;
+    height: 100px;
+    overflow-y: auto;
+  
+}
+.homes-beds{
+  .dropdown-menu.show{
+    display: block;
+  }
+}
+.dropdown-submenu-container a.dropdown-submenu::after {
+  transform: rotate(1deg) !important;
+}
+.exploresection {
+  width: 100%;
+  .exploresection-card {
+    width: 50%;
+  }
+  .slick-slider {
+    .slick-slide {
+      img {
+        width: 428px;
+        height: 292px;
+        transition: all 0.3s ease;
+
+      }
+    }
+    .slick-list {
+      width: 26vw;
+      border-radius: 10px;
+    }
+    button {
+      background: none;
+    }
+    .slick-prev {
+      z-index: 2;
+      left: 10px;
+    }
+    .slick-next {
+        top: 9.44rem;
+        left: 21rem;
+    }
+    .slick-dots {
+      bottom: -18px;
+      right: 3px;
+      li.slick-active button:before {
+        color: aqua;
+      }
+      button::before {
+        font-size: 9px;
+        line-height: 9px;
+      }
+    }
+  }
+  .explorehouse-section {
+    width: 60%;
+
+    .exploresection-card {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .map {
+    position: sticky;
+    height: 100%;
+    right: 0px;
+    top: 6rem;
+    width: 40%;
+  }
+}
