@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Explorehouse from "../explorehouse/Explorehouse";
-
+import "./Explore.scss"
 const Explore = () => {
 
     
