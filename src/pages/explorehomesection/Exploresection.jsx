@@ -106,6 +106,9 @@ export default class Exploresection extends Component {
     return (
       <>
         <div className="spacer" />
+        <br/>
+        <br/>
+        <br/>
           <Container className="navigator-explore">
 
               <div class="m-4">

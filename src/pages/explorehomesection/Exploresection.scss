@@ -1,7 +1,9 @@
 .navigator-explore{
   display: flex;
   align-items: center;
-
+  position: fixed;
+  z-index: 2;
+  background-color: white;
 }
 .dropdown-menu.show{
   display: flex;
