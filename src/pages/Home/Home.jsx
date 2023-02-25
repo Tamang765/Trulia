@@ -12,7 +12,6 @@ import Truliahelp from "../truliahelp/Truliahelp";
 const Home = () => {
   return (
     <>
-      <Discover />
       <Explore />
     <New />
     <Truliahelp />
