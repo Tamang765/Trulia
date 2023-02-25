@@ -11,7 +11,7 @@ import ImageList from "./homeimages/Images";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
-import { Row, Col, NavDropdown, Container, Navbar, Nav } from "react-bootstrap";
+import { Row, Col, NavDropdown, Container, Navbar, Nav, Button } from "react-bootstrap";
 import "react-bootstrap-submenu/dist/index.css";
 import Footer from "../footer/Footer";
 import Footerlast from "../footerlast/Footerlast";
@@ -93,7 +93,6 @@ class SimpleSlider extends Component {
                 <img src={image} height="400px" width="500px" alt="" />
               </div>
               </NavLink>
-
             ))}
           </Slider>
         ))}
@@ -106,8 +105,8 @@ export default class Exploresection extends Component {
     return (
       <>
         <div className="spacer" />
-          <Container className="navigator-explore">
-
+        <br />
+          <Container className="navigator-explore pt-1">
               <div class="m-4">
                 <div class="btn-group">
                   <input
@@ -118,7 +117,7 @@ export default class Exploresection extends Component {
                     autocomplete="off"
                   />
                   <label class="btn btn-outline-secondary" for="radio1">
-                    Radio 1
+                    Agent Listing
                   </label>
 
                   <input
@@ -130,11 +129,11 @@ export default class Exploresection extends Component {
                     checked
                   />
                   <label class="btn btn-outline-secondary" for="radio2">
-                    Radio 2
+                    Others
                   </label>
                 </div>
               </div>
-              <Nav className="me-auto">
+              <Nav className="me-auto d-flex gap-4">
                 <NavDropdownMenu title="Any Price" id="collasible-nav-dropdown">
                   <DropdownSubmenu
                     href="#action/3.7"
@@ -194,7 +193,7 @@ export default class Exploresection extends Component {
                         value="0"
                         onchange="val(this)"
                       />
-                      Popular first
+                      House
                     </label>
                     <label class="radio-inline">
                       <input
@@ -203,7 +202,7 @@ export default class Exploresection extends Component {
                         value="1"
                         onchange="val(this)"
                       />
-                      Newest first
+                      Condo
                     </label>
                     <label class="radio-inline">
                       <input
@@ -212,7 +211,7 @@ export default class Exploresection extends Component {
                         value="2"
                         onchange="val(this)"
                       />
-                      Newest first
+                      Townhome
                     </label>
                     <label class="radio-inline">
                       <input
@@ -221,15 +220,36 @@ export default class Exploresection extends Component {
                         value="3"
                         onchange="val(this)"
                       />
-                      Newest first
+                      Multi-Family
                     </label>
+                    <label class="radio-inline">
+                      <input
+                        type="radio"
+                        name="gr"
+                        value="4"
+                        onchange="val(this)"
+                      />
+                      Land
+                    </label>
+                    <label class="radio-inline">
+                      <input
+                        type="radio"
+                        name="gr"
+                        value="5"
+                        onchange="val(this)"
+                      />
+                      MObile/Manufactured
+                    </label>
+                    
                   </form>
+                  
                 </NavDropdownMenu>
+                <Button>Save Search</Button>
               </Nav>
           </Container>
-        <div className="exploresection">
-          <div className="text-center py-8">
-            <h1>Explore homes on Trulia</h1>
+        <div className="exploresection pt-12">
+          <div className="explore-header">
+            <h2 className="pl-10">Newly Listed Houses</h2>
           </div>
           <div className="container-fluid d-flex">
             <div className="explorehouse-section row">

@@ -1,22 +1,52 @@
-.discover-section{
-    background: url("../../media/discover.jpg");
-    background-size: cover;
-    position: relative;
-    align-items: center;
+.discover-section {
+  background: url("../../media/discover.jpg");
+  background-size: cover;
+  position: relative;
+  align-items: center;
 
-    height: 39rem;
-    .discover{
-        position: absolute;
-        color: white;
-        .discover-houses{
-            .select-category{
-                background-color: rgba(59, 65, 68, 0.6);
-                border-radius: 13px;
-            .btn{
-                color: white;
-                padding: 8px 28px;
-            }
+  height: 39rem;
+  .discover {
+    position: absolute;
+    color: white;
+    padding-top: 8rem;
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .discover-houses {
+      .select-category {
+        background-color: rgba(59, 65, 68, 0.6);
+        border-radius: 13px;
+
+        .nav {
+          border: none;
+          a {
+            border-radius: 10px;
+            font-weight: 600;
+            color:#ff6f1e;
+          }
+
         }
+        .btn {
+          color: white;
+          padding: 8px 28px;
+
+        }
+      }
+    }
+    form{
+        input{
+            height: 7vh;
+            width: 33vw;
+        };
+        .btn{
+            color: white;
+            background-color: tomato;
+            border: none;
+        }
+        .btn:hover{
+            background-color: crimson;
         }
     }
+  }
 }

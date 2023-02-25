@@ -1,34 +1,193 @@
 import React, { Component, useEffect, useState } from "react";
+import { Button, ButtonGroup, Card, Modal } from "react-bootstrap";
 import { AiFillUnlock, AiOutlineCalendar } from "react-icons/ai";
+import { BsEmojiSunglasses } from "react-icons/bs";
+import { BsShareFill } from "react-icons/bs";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 import {
   FaBed,
   FaMobileAlt,
   FaParking,
   FaTemperatureHigh,
 } from "react-icons/fa";
-import { MdOutdoorGrill } from "react-icons/md";
+import { MdOutdoorGrill, MdOutlinePersonOutline } from "react-icons/md";
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
 import { useParams } from "react-router-dom";
 import ImageList from "../explorehomesection/homeimages/Images";
-import Newlist from "../newlylisted/Newlist";
-import Newlylisted from "../newlylisted/Newlylisted";
+import New from "../newlylisted/New";
 import "./Housedetails.scss";
 import { Localsays } from "./Localsays";
 import Pricetable from "./Pricetable";
+import CalendarPicker from "./Similarhouse/Datepicker/Datepicker";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleChevronLeft,
+  faCircleChevronRight,
+  faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import galleryImages from "../explorehomesection/homeimages/Gallery";
+import Similarhouse from "./Similarhouse/Similarhouse";
 
 export const Imageitem = () => {
   const { category } = useParams();
   const filterimg = ImageList.filter((item) => item.category === category);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = (index) => {
+    setSlideNumber(index);
+    setOpenModal(true);
+  };
+  const handleCloseModal = () => {
+    setModalShow(false);
+  };
+
+  // Previous Image
+  const prevSlide = () => {
+    slideNumber === 0
+      ? setSlideNumber(galleryImages.length - 1)
+      : setSlideNumber(slideNumber - 1);
+  };
+
+  // Next Image
+  const nextSlide = () => {
+    slideNumber + 1 === galleryImages.length
+      ? setSlideNumber(0)
+      : setSlideNumber(slideNumber + 1);
+  };
+  const values = [true];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
+  const [activeBtnIndex, setActiveBtnIndex] = useState(1);
+  useEffect(() => {
+    const header = document.getElementById("navbtn");
+    const btns = header.getElementsByClassName("btn");
+    const handleClick = (index) => {
+      setActiveBtnIndex(index);
+    };
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", () => handleClick(i));
+    }
+    return () => {
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].removeEventListener("click", () => handleClick(i));
+      }
+    };
+  }, []);
   return (
     <>
-      <div className=" row housedetailsimg container-fluid d-flex justify-content-center">
-        {filterimg[0].activethreeimg.map((image, index) => (
-          <div className="imgdetail" key={index}>
-            <img src={image} alt="" />
-            <h2>{image.posted}</h2>
+      {values.map((v, idx) => (
+        <div
+          className=" row housedetailsimg container-fluid d-flex justify-content-center"
+          onClick={() => handleShow(v)}
+        >
+          {typeof v === "string" && `below ${v.split("-")[0]}`}
+          {filterimg[0].activethreeimg.map((image, index) => (
+            <div className="imgdetail" key={index}>
+              <img src={image} alt="" />
+              <h4>{image.posted}</h4>
+            </div>
+          ))}
+        </div>
+      ))}
+      <Modal
+        className="image-collection"
+        keyboard={false}
+        show={show}
+        fullscreen={fullscreen}
+        onHide={() => setShow(false)}
+      >
+        <div className="container">
+          <div id="navbtn" className="pb-10">
+            <div
+              className={`btn ${activeBtnIndex === 0 ? "active" : ""}`}
+              onClick={() => setActiveBtnIndex(0)}
+            >
+              Media
+            </div>
+            <div
+              className={`btn ${activeBtnIndex === 1 ? "active" : ""}`}
+              onClick={() => setActiveBtnIndex(1)}
+            >
+              Map
+            </div>
+            <div
+              className={`btn ${activeBtnIndex === 2 ? "active" : ""}`}
+              onClick={() => setActiveBtnIndex(2)}
+            >
+              Street View
+            </div>
+            <div
+              className={`btn ${activeBtnIndex === 3 ? "active" : ""}`}
+              onClick={() => setActiveBtnIndex(3)}
+            >
+              Schools
+            </div>
+            <div
+              className={`btn ${activeBtnIndex === 4 ? "active" : ""}`}
+              onClick={() => setActiveBtnIndex(4)}
+            >
+              Shop & Eat
+            </div>
+            <div className="share d-flex">
+                  <button className="d-flex align-items-center gap-1"> <span><BsShareFill/></span> Share</button>
+                  <button className="d-flex align-items-center gap-1"><span><BsFillSuitHeartFill/></span> Save</button>
+                </div>
           </div>
-        ))}
-      </div>
+          {openModal && (
+            <div className="sliderWrap">
+              <FontAwesomeIcon
+                icon={faCircleXmark}
+                className="btnClose"
+                onClick={handleCloseModal}
+              />
+              <FontAwesomeIcon
+                icon={faCircleChevronLeft}
+                className="btnPrev"
+                onClick={prevSlide}
+              />
+              <FontAwesomeIcon
+                icon={faCircleChevronRight}
+                className="btnNext"
+                onClick={nextSlide}
+              />
+              <div className="fullScreenImage">
+                <img src={galleryImages[slideNumber].activeimg} alt="" />
+              </div>
+            </div>
+          )}
+          <Modal.Header>
+            <div className="galleryWrap">
+              {galleryImages &&
+                galleryImages.map((slide, index) => {
+                  return (
+                    <div
+                      className="single"
+                      key={index}
+                      onClick={() => handleOpenModal(index)}
+                    >
+                      <img src={slide.activeimg} alt="" closeButton />
+                    </div>
+                  );
+                })}
+            </div>
+          </Modal.Header>
+        </div>
+        <Modal.Footer closeButton>
+          <CalendarPicker />
+
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
@@ -46,12 +205,7 @@ export const Map = () => {
   );
 };
 
-export const Imagehousedetail = ({
-  interiorfeatures1,
-  interiorfeatures2,
-  interiorfeatures3,
-  interiorfeatures4,
-}) => {
+export const Imagehousedetail = ({}) => {
   const { category } = useParams();
   const filterimg = ImageList.filter((item) => item.category === category);
   const [activeBtnIndex, setActiveBtnIndex] = useState(1);
@@ -73,12 +227,13 @@ export const Imagehousedetail = ({
   return (
     <>
       <div className="row container exacthouse-detail d-flex">
+        <Similarhouse/>
         <div className="details-house-map">
           <div className="house-details">
             {filterimg.map((item, index) => (
               <>
                 <div className="details d-flex gap-10" key={index}>
-                  <h1>{item.posted}</h1>
+                  <h2>{item.posted}</h2>
                   <div className="d-flex house-info">
                     <div className="d-flex house-price-place">
                       <span className="pr-10">{item.place} </span>
@@ -128,6 +283,7 @@ export const Imagehousedetail = ({
                 >
                   Shop & Eat
                 </div>
+
               </div>
               <div className="map pt-3">
                 <Map />
@@ -223,15 +379,15 @@ export const Imagehousedetail = ({
         </div>
         <Housefeatures />
         <Pricetable />
-        <div className=" similar-house newlist">
+        {/* <div className=" similar-house newlist">
           <span className="similar-home">Similar Homes You May Like</span>
-          <Newlylisted />
-        </div>
-        <div className="newlist my-10">
+          <New />
+        </div> */}
+        <div className="newlist">
           <span className="similar-home">
             New Listings near 1960 Tall Tree Dr
           </span>
-          <Newlylisted />
+          <New />
         </div>
         <div className="property-taxes">
           <h4>Property Taxes and Assessment</h4>
@@ -267,8 +423,8 @@ export default class Housedetails extends Component {
       <div className="container housedetail">
         <Imageitem />
         <div className="share d-flex">
-          <button>Share</button>
-          <button>Save</button>
+        <button className="d-flex align-items-center gap-1"> <span><BsShareFill/></span> Share</button>
+                  <button className="d-flex align-items-center gap-1"><span><BsFillSuitHeartFill/></span> Save</button>
         </div>
         <Imagehousedetail />
       </div>
@@ -309,6 +465,7 @@ function MyComponent({ content1, content2, content3, content4, content5 }) {
 export function Housefeatures() {
   return (
     <div className="house-features">
+      <Similarhouse/>
       <MyComponent
         content1={
           <div className="row interiorfeatures">

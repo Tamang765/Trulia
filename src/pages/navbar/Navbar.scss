@@ -1,4 +1,11 @@
+.signin-login{
+  .btn{
+    border: 1px solid grey;
+  }
+
+}
 .navbar{
+  border-bottom: 1px solid #999;
   background-color: white;
 }
 .trulia-logo{
@@ -45,3 +52,38 @@
   .login-signin-btn:hover{
     background-color: #999;
   }
+.signin{
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-dialog{
+    display: flex;
+    justify-content: center;
+    padding-top: 14rem;
+    .modal-content{
+        width: 75%;
+        height: 60vh;
+        background-color: white;
+    }
+    .modal-header{
+      .btn-close{
+        width: 20px !important;
+      }
+    }
+
+    button{
+      background-color: rgb(0, 120, 130);
+      color: white;
+      border-radius: 7px;
+      font-size: 15px;
+      font-weight: 600;
+      width: 100%;
+  }
+  button:hover{
+      background-color: white;
+      color: rgb(0, 120, 130);
+      border: 1px solid rgb(0, 120, 130);;
+  }
+  }
+}

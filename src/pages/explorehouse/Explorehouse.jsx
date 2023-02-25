@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import "./Explorehouse.scss";
 import bgone from "../../media/bgone.jpg";
 import smone from "../../media/smone.jpg";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import {AiOutlineRight} from "react-icons/ai"
+import { Nav } from "react-bootstrap";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -40,7 +42,7 @@ export default class Explorehouse extends Component {
       infinite: true,
       centerMode: false,
       slidesToShow: 6,
-      slidesToScroll: 5,
+      slidesToScroll: 2,
       prevArrow: <SamplePrevArrow />,
       nextArrow: <SampleNextArrow />,
       variableWidth: true,
@@ -48,214 +50,214 @@ export default class Explorehouse extends Component {
     return (
       <div className="container-fluid house-discover">
         <Slider {...settings}>
-        <a href="../explorehomesection/Exploresection" className="row" style={{}}>
+        <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
-              <a href="./explorehomesection/Exploresection"></a>
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </a>
-          <div className="row" style={{}}>
+            <Outlet/>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
-            <div className="col-sm-12 relative">
-              <div className="individual-house">
-                <img className="bgcard" src={bgone} alt="" />
-              </div>
-
-              <h2>Atlanta GA</h2>
-              <button>View House</button>
-            </div>
-          </div>
-          <div className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
-              <div className="individual-house">
-                <img src={smone} alt="" />
-              </div>
-              <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
-            </div>
-            <div className="col-sm-12 relative">
-              <div className="individual-house">
-                <img src={smone} alt="" />
-              </div>
-              <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
-            </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-            <div className="col-sm-12 relative">
+            <div  className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img className="bgcard" src={bgone} alt="" />
               </div>
 
               <h2>Atlanta GA</h2>
-              <button>View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
-          <div className="row" style={{}}>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
             <div className="col-sm-12 relative mb-3">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
             <div className="col-sm-12 relative">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
               <h2>Atlanta GA</h2>
-              <button className="smallcard-btn">View House</button>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
             </div>
-          </div>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
+            <div className="col-sm-12 relative">
+              <div className="individual-house">
+                <img className="bgcard" src={bgone} alt="" />
+              </div>
+
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
+            <div className="col-sm-12 relative mb-3">
+              <div className="individual-house">
+                <img src={smone} alt="" />
+              </div>
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+            <div className="col-sm-12 relative">
+              <div className="individual-house">
+                <img src={smone} alt="" />
+              </div>
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+          </Link>
 
         </Slider>
       </div>

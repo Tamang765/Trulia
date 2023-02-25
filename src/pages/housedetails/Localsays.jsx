@@ -22,7 +22,7 @@ function Localsay({ content1, content2, content3, content4, content5 }) {
     : [content1, content2,content3, content4, content5];
 
   return (
-    <div className="content">
+    <div className="content pb-9">
       {displayedContent.map((content, index) => (
         <div key={index}>{content}</div>
       ))}

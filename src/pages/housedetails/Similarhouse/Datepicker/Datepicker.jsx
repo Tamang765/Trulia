@@ -29,26 +29,26 @@ function CalendarPicker() {
   }, []);
   return (
     <div
-      className="d-flex justify-content-center datepicker"
+      className="d-flex justify-content-center datepicker mt-5"
       style={{ width: "100%" }}
     >
-      <div>
+      <div className="req-image">
         <img src={reqhouse} alt="" />
       </div>
-      <div style={{ width: "50%" }}>
+      <div className="calender-date" style={{ width: "50%" }}>
         <div id="navbtn" className="pb-10">
-          <h4 className="pb-3">Local Information</h4>
+          <h4 className="pb-3">Schedule Time</h4>
           <div
             className={`btn ${activeBtnIndex === 0 ? "active" : ""}`}
             onClick={() => setActiveBtnIndex(0)}
           >
-            Map
+            In Person
           </div>
           <div
             className={`btn ${activeBtnIndex === 1 ? "active" : ""}`}
             onClick={() => setActiveBtnIndex(1)}
           >
-            Schools
+            Video Chat
           </div>
         </div>
         <Datepicker

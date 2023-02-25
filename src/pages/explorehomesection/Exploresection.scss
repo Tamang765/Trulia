@@ -1,15 +1,25 @@
 .navigator-explore{
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  margin-top: 2rem;
+  
+  .dropdown-menu.show{
+    display: flex;
+  }
+  .dropdown{
+    border: 1px solid rgb(188, 181, 181);
+    border-radius: 5px;
 
+    #collasible-nav-dropdown{
+      color: black;
+
+    }
+  }
 }
-.dropdown-menu.show{
-  display: flex;
-}
-.dropdown{
-  border: 1px solid rgb(188, 181, 181);
-  border-radius: 5px;
-}
+
 .navbar-nav{
   gap: 10px;
 }
@@ -24,6 +34,12 @@
   
 }
 .homes-beds{
+  form{
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   .dropdown-menu.show{
     display: block;
   }
@@ -33,6 +49,17 @@
 }
 .exploresection {
   width: 100%;
+  nav{
+    justify-content: center;
+    display: flex;
+    padding-block: 4rem;
+  }
+  .explore-header{
+    padding:6rem 0 2rem 1.5rem;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
   .exploresection-card {
     width: 50%;
   }
@@ -41,6 +68,7 @@
       img {
         width: 428px;
         height: 292px;
+        border-radius: 6%;
         transition: all 0.3s ease;
 
       }

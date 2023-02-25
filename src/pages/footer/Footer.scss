@@ -8,7 +8,16 @@
         font-size: 10px;
         padding-top: 10px;
         align-items: center;
+        .show{
+            border: none;
+            font-size: 10px;
+            color: blue;
+        }
         #more{
+            display: flex;
+            flex-direction: column;
+        }
+        div{
             display: flex;
             flex-direction: column;
         }

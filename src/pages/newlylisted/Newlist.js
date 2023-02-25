@@ -9,7 +9,8 @@ const Newlist = [
       place: "2914 lenox Rd NE Atlanta, GA 30324 ",
       location: "Engel & vokers",
       category:"item-1",
-      images: [require("../../media/bgone.jpg")]
+      images: [require("../../media/bgone.jpg")],
+      newlylisted: [require("../../media/bgone.jpg")],
     },
     {
       id: "2",
@@ -21,6 +22,7 @@ const Newlist = [
       place: "2914 lenox Rd NE Atlanta, GA 30324 ",
       location: "Engel & vokers",
       category:"item-2",
+      newlylisted: [require("../../media/bgone.jpg")],
       images: [require("../../media/smone.jpg")]
     },
     {
@@ -32,6 +34,7 @@ const Newlist = [
       sqft: "123 sqft",
       place: "2914 lenox Rd NE Atlanta, GA 30324 ",
       location: "Engel & vokers",
+      newlylisted: [require("../../media/bgone.jpg")],
       category:"item-3"
     },
     {
