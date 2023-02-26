@@ -61,7 +61,7 @@ export default class Explorehouse extends Component {
             <Outlet/>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -87,33 +87,7 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
-              <div className="individual-house">
-                <img src={smone} alt="" />
-              </div>
-              <h2>Atlanta GA</h2>
-              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
-            </div>
-            <div  className="col-sm-12 relative">
-              <div className="individual-house">
-                <img src={smone} alt="" />
-              </div>
-              <h2>Atlanta GA</h2>
-              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
-            </div>
-          </Link>
-          <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative">
-              <div className="individual-house">
-                <img className="bgcard" src={bgone} alt="" />
-              </div>
-
-              <h2>Atlanta GA</h2>
-              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
-            </div>
-          </Link>
-          <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -139,7 +113,7 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -165,7 +139,7 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -191,7 +165,7 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -217,7 +191,7 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>
@@ -243,7 +217,33 @@ export default class Explorehouse extends Component {
             </div>
           </Link>
           <Link to="./Exploresection" className="row" style={{}}>
-            <div className="col-sm-12 relative mb-3">
+            <div className="col-sm-12 relative mb-3 individualrow">
+              <div className="individual-house">
+                <img src={smone} alt="" />
+              </div>
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+            <div className="col-sm-12 relative">
+              <div className="individual-house">
+                <img src={smone} alt="" />
+              </div>
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
+            <div className="col-sm-12 relative">
+              <div className="individual-house">
+                <img className="bgcard" src={bgone} alt="" />
+              </div>
+
+              <h2>Atlanta GA</h2>
+              <button className="smallcard-btn d-flex align-items-center"> <span>View House</span> <AiOutlineRight/> </button>
+            </div>
+          </Link>
+          <Link to="./Exploresection" className="row" style={{}}>
+            <div className="col-sm-12 relative mb-3 individualrow">
               <div className="individual-house">
                 <img src={smone} alt="" />
               </div>

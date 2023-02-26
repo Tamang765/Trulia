@@ -6,15 +6,18 @@ import Footerlast from '../../footerlast/Footerlast'
 import New from '../../newlylisted/New'
 import Searchneigh from '../../searchneighbor/Searchneigh'
 import Truliahelp from '../../truliahelp/Truliahelp'
+import Rent from './Rent'
 
 const Buy = () => {
   return (
    <>
-   <br/>
-   <br/>
-   <br/>
-   <br/>
-
+      <Rent />
+    <New />
+    <Truliahelp />
+    <Searchneigh />
+    <Discoverplace />
+    <Footer />
+    <Footerlast/>
     </>
   )
 }

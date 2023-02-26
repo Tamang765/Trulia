@@ -54,15 +54,17 @@
     img {
       width: 480px;
     }
+    padding-left: 2rem;
     height: 27vh;
     display: flex;
     width: 27% !important;
     justify-content: center;
   }
   .imgdetail:nth-child(3) {
-    left: 57.1rem;
+    left: 50.1rem;
     position: absolute;
     top: 13rem;
+    margin-left: -11px;
   }
   img:hover {
     transform: scale(1.1);
@@ -124,12 +126,22 @@
 
     .house-details {
       width: 85%;
-      padding-left: 4rem;
+      .details{
+        h2{
+          bottom: 31rem;
+    background: white;
+    left: 10rem;
+    font-size: 17px;
+    position: absolute;
+    padding: 8px;
+    border-radius: 5px;
+        }
+      }
     }
   }
   .local-info {
     width: 85%;
-    padding-left: 8rem;
+    padding-left: 9rem;
     .open-house {
       .calender {
         color: rgb(78, 106, 172);
@@ -178,7 +190,7 @@
     font-weight: 500;
   }
   .schedule {
-    width: 16%;
+    width: 23%;
     border: 1px solid grey;
     border-radius: 10px;
     text-align: center;
@@ -186,7 +198,7 @@
     display: flex;
     margin-left: -15rem;
     flex-direction: column;
-    height: 14rem;
+    height: 18rem;
     h3 {
       font-weight: 600;
     }

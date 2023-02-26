@@ -6,11 +6,14 @@
         background-color: blue !important;
     }
     .slick-slider{
-        padding-left: 35px;
+        padding-left: 12px;
         height: 60vh;
+        display: flex;
+    align-items: center;
     }
     .slick-prev{
         padding-left: 19px;
+        z-index: 2;
     }
     .slick-next{
         padding-right: 46px;

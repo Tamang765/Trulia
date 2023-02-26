@@ -14,11 +14,15 @@
     height: auto;
     width: 300px;
     cursor: pointer;
+    .individualrow{
+        position: relative;
+    }
     .individual-house{
         overflow: hidden;
         width: 300px;
         margin-right: 10px;
         border-radius: 15px;
+        position: relative;
     }
     img{
         filter: brightness(75%);
@@ -39,19 +43,20 @@
         position: absolute;
     }
     h2{
-        font-weight: 700;
-    top: 10px;
-    left: 29px;
-    font-size: 20px;
-    color: white;
-
+        top: 0;
+        color: white;
+        font-size: 21px;
+        font-weight: 600;
+        padding: 10px;
     }
     button{
-        bottom: 14px;
-        padding: 10px;
-        left: 5rem;
-        background-color: white;
-        border-radius: 9px;
+        bottom: 13px;
+        background: #ffffff7a;
+    justify-content: center;
+    margin-left: 74px;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
     }
 }
 img:nth-child(odd){

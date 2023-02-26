@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footerlast.scss";
+import footerimg from "../../media/footer.JPG"
 const Footerlast = () => {
   return (
     <div className="container footerlast">
@@ -40,7 +41,8 @@ const Footerlast = () => {
           (Canada) Inc. holds real estate brokerage licenses in multiple
           provinces.
         </p>
-
+        <span>Copyright © 2023 Trulia, LLC. All rights reserved. Equal Housing Opportunity. Have a Question? Visit our Help Center to find the answer.</span>
+        <div><img src={footerimg} alt="" /></div>
       </div>
     </div>
   );

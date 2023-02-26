@@ -4,7 +4,7 @@ import "./Footer.scss";
 import {AiOutlineDown} from "react-icons/ai"
 import {IoIosArrowUp} from "react-icons/io"
 function Footercomp({ content1, content2 }) {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
@@ -19,12 +19,13 @@ function Footercomp({ content1, content2 }) {
       ))}
       {showMore && (
         <div className="btn show d-flex align-items-center" onClick={toggleShowMore}>
-          Show less <IoIosArrowUp/>
+          Show more <AiOutlineDown/>
         </div>
       )}
       {!showMore && (
         <div className="btn show d-flex align-items-center" onClick={toggleShowMore}>
-          Show more <AiOutlineDown/>
+          
+          Show less <IoIosArrowUp/>
         </div>
       )}
     </div>
@@ -33,7 +34,7 @@ function Footercomp({ content1, content2 }) {
 const Footer = () => {
   return (
     <>
-      <div className="container footer mt-20">
+      <div className="container footer">
         <div className="real-estate">
           <h3>Real Estate Markets</h3>
           <div className="list">

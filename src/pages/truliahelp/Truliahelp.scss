@@ -1,5 +1,5 @@
 .truliahelp{
-    
+    padding-bottom: 6rem;
     .buy-help, .rent-help , .seeneighbor-help{
         width: 300px;
         display: block;
@@ -16,6 +16,7 @@
             border-radius: 7px;
             font-size: 15px;
             font-weight: 600;
+            border: 1px solid grey;
         }
         button:hover{
             background-color: white;

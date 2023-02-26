@@ -1,11 +1,11 @@
 import React, { Children, useState } from "react";
-import React, { Children, useState } from "react";
 import { Container, Nav, Tab, Tabs } from "react-bootstrap";
 import "./Discover.scss";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { FaSearch } from "react-icons/fa";
 import Home from "../Home/Home";
+import Buy from "./Events/Buy";
 const Discover = () => {
   const [toggleState, setToggleState] = useState(1);
 
@@ -71,7 +71,7 @@ const Discover = () => {
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-          this is rent section
+          <Buy/>
         </div>
 
         <div

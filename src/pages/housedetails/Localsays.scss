@@ -1,5 +1,5 @@
 .Local-testimonials{
-    margin-top: 4rem;
+    margin-block: 4rem;
     border: 1px solid #999;
     padding: 10px;
     background: lightgrey;
@@ -10,6 +10,8 @@
         gap: 25px;
         .btn{
             width: 10rem;
+            
+    margin-bottom: 33px;
         }
     }
     h2{
@@ -32,6 +34,8 @@
                 }
                 div{
                     display: flex;
+                    align-items: center;
+                    gap: 10px;
                 }
                 
             }

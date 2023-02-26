@@ -62,7 +62,7 @@ export function CardComponent({ item }) {
             </Card.Subtitle>
           </Card.Text>
           <div className="d-flex justify-content-between pt-3">
-            <Card.Link href="#" className="d-flex pr-3">
+            <Card.Link href="#" className="d-flex gap-3 align-items-center">
               <BsEmojiSunglasses />
               <span className="pl-2">{item.likes}</span>
             </Card.Link>

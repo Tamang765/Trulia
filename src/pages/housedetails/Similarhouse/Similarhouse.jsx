@@ -15,8 +15,6 @@ export const CardItem = ({
   }) => {
     return (
         <div className='similarhouse'>
-
-            <h1>asfg</h1>
             <span>{price}</span>
         </div>
     )}

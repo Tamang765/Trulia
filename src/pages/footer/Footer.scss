@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     gap: 35px;
+    margin-top: 20px;
     .list{
         display: flex;
         flex-direction: column;
@@ -24,7 +25,7 @@
     }
     h3{
         font-size: 15px;
-    color: grey;
+    color: #393434;
     font-weight: 600;
     }
     .explore-trulia-footer{

@@ -6,7 +6,7 @@ import "./Searchneigh.scss"
 
 const Searchneigh = () => {
   return (
-    <div className="container text-center">
+    <div className="search-neighbour container text-center">
       <div className="text-center pt-8">
         <h4>See how Trulia can help</h4>
       </div>
